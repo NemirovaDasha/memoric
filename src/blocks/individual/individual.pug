@@ -1,0 +1,14 @@
+section.individual.wrapper
+  h1.t-h1 Индивидулаьные игры
+
+  for item in games
+    if !item.players
+      article.game.m-individual(style={background: item.color})
+        img.game__dino(src='assets/img/games/dino.png', alt='dino')
+        .game__picture
+          img.game__image(src=item.img, alt=item.title)
+        .game__info
+          h2.game__title=item.title
+          p.game__desc=item.desc
+          a.button.t-white.js-game(style={color: item.color}, href=item.link) Играть
+

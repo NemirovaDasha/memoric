@@ -1,0 +1,13 @@
+extends templates/main
+
+block container
+  main.main#vue-game-i-know
+    include ../blocks/game-iknow/game-iknow
+    include ../blocks/game-iknow/question/question
+
+block footer
+
+block clouds
+
+block append scripts
+  script(src="scripts/vueGameIKnow.bundle.js")

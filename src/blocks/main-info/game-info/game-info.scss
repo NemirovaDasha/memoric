@@ -1,0 +1,61 @@
+.game-info {
+  &__item {
+    @include display-flex(column);
+    background:    white;
+    border-radius: 36px;
+    width:         860px;
+    margin-bottom: 50px;
+    padding:       34px 20px 12px 56px;
+    box-sizing:    border-box;
+    font-size:     24px;
+    line-height:   30px;
+
+    &.m-single {
+      @include display-flex();
+      padding: 34px 56px 6px;
+    }
+
+    &:nth-child(2n) {
+      margin-left: auto;
+    }
+  }
+
+  &__info {
+    @include display-flex(column);
+    width:       470px;
+    margin-left: 42px;
+  }
+
+  &__title {
+    font-size:   42px;
+    line-height: 50px;
+    font-weight: bold;
+    color:       $color-accent-2;
+    text-align:  center;
+    margin:      0 auto 42px;
+  }
+
+  &__text {
+    width: 470px;
+
+    p {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin:  68px auto 40px;
+
+    &.t-2 {
+      margin: 68px 0 0;
+    }
+  }
+
+  &__team {
+    @include display-flex(row, center, space-between);
+    margin-top: -60px;
+    width:      100%;
+  }
+
+}

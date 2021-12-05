@@ -1,0 +1,90 @@
+.result {
+  position: relative;
+  padding:  0 40px;
+
+  &__table {
+    @include display-flex(row, center, space-between)
+  }
+
+  &__stars {
+    position:  absolute;
+    top:       80px;
+    left:      45%;
+    transform: translateX(-50%);
+
+    &:nth-child(3) {
+      top:       70%;
+      left:      -50px;
+      transform: none;
+    }
+
+    &:nth-child(4) {
+      top:       65%;
+      right:     35%;
+      left:      auto;
+      transform: translateX(50%);
+    }
+  }
+
+  &__places {
+    width:      550px;
+    padding:    50px;
+    background: white;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 5px 10px 11px rgba(black, 0.25);
+
+    img {
+      margin: -80px auto 0;
+    }
+  }
+
+  &__prizewinners {
+    @include display-flex($justify: space-between);
+    flex-wrap: wrap;
+    width:     345px;
+    margin:    0 auto;
+  }
+
+  &__player {
+    width:       110px;
+    text-align:  center;
+    flex-shrink: 0;
+
+    span {
+      display: block;
+    }
+
+    &.m-first {
+      width:  345px;
+      height: 86px;
+    }
+  }
+
+  &__winner {
+    width:      370px;
+    padding:    30px 20px;
+    background: white;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 5px 10px 11px rgba(black, 0.25);
+  }
+
+  &__title {
+    font-size:   36px;
+    font-weight: normal;
+    font-family: $font-family-second;
+    color:       $color-accent-2;
+  }
+
+  &__congrats {
+    @include display-flex($justify: space-between);
+    margin: 25px auto;
+  }
+
+  &__dino {
+    display: block;
+    width:   250px;
+    margin:  0 auto;
+  }
+}

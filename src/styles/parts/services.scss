@@ -1,0 +1,33 @@
+footer,
+header,
+main {
+  font-family: $font-family-default;
+
+  a {
+    transition: color $transition-hover-off;
+
+    @include hover() {
+      color:      $color-red;
+      transition: color $transition-hover-on;
+    }
+  }
+}
+
+.wrapper {
+  max-width:  1480px;
+  padding:    50px;
+  margin:     0 auto;
+  box-sizing: border-box;
+}
+
+.mod-visible {
+  visibility: visible;
+}
+
+.mod-hidden {
+  visibility: hidden;
+}
+
+.game-points {
+  visibility: hidden;
+}

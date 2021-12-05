@@ -1,0 +1,86 @@
+.game {
+  @include display-flex($align: center);
+  width:         650px;
+  height:        350px;
+  border-radius: 40px;
+  padding:       30px 34px 50px;
+  box-sizing:    border-box;
+  color:         white;
+  z-index:       1;
+  margin-bottom: 77px;
+  position:      relative;
+
+  &.m-individual {
+    &:nth-child(2n+1) {
+      margin-left: auto;
+
+      .game__dino {
+        right:     -50px;
+        left:      auto;
+        transform: scale(-1, 1);
+      }
+    }
+
+    .game__dino {
+      position: absolute;
+      bottom:   58%;
+      left:     -50px;
+    }
+  }
+
+  &.m-team {
+    .game__dino {
+      position: absolute;
+      left:     -50px;
+      right:    auto;
+      bottom:   40%;
+    }
+
+    &:nth-child(2n) {
+      margin-left: auto;
+
+      .game__dino {
+        right:     -50px;
+        left:      auto;
+        transform: scale(-1, 1);
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    margin-top: 190px;
+  }
+
+  &__picture {
+    width:       210px;
+    flex-shrink: 0;
+    height:      250px;
+    background:  $color-beige;
+    padding:     20px 10px;
+    box-sizing:  border-box;
+    box-shadow:  6px 6px 10px rgba(black, 0.4);
+  }
+
+  &__image {
+    width:      100%;
+    height:     auto;
+    max-height: 220px;
+  }
+
+  &__info {
+    @include display-flex(column, center, space-between);
+    height: 100%;
+  }
+
+  &__title {
+    font-size:   36px;
+    line-height: 56px;
+    font-weight: bold;
+  }
+
+  &__desc {
+    font-size:   24px;
+    line-height: 29px;
+    text-align:  center;
+  }
+}

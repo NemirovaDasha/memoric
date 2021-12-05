@@ -1,0 +1,122 @@
+.game-loss {
+  padding: 0;
+
+  &__game {
+    @include display-flex(row, center, space-between);
+    width:      100%;
+    padding:    0 70px;
+    box-sizing: border-box;
+  }
+
+  &__find {
+    text-align: center;
+  }
+
+  &__picture {
+    width:         220px;
+    height:        220px;
+    border-radius: 18px;
+    padding:       15px;
+    margin-bottom: 60px;
+    box-sizing:    border-box;
+    background:    white;
+    box-shadow:    0 7px 16px rgba(black, 0.41);
+
+    &.m-finds {
+      padding: 60px;
+    }
+  }
+
+  &__background {
+    width:      100%;
+    height:     100%;
+    padding:    15px;
+    background: $color-brown;
+    box-sizing: border-box;
+    position:   relative;
+
+    img {
+      width:      100%;
+      height:     auto;
+      position:   absolute;
+      visibility: hidden;
+      padding:    10px;
+      top:        50%;
+      left:       0;
+      box-sizing: border-box;
+      transform:  translateY(-50%);
+
+      &:first-child {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__cupboard {
+    width:    820px;
+    height:   590px;
+    position: relative;
+    z-index:  1;
+  }
+
+  &__cupb {
+    width:    100%;
+    height:   auto;
+    position: absolute;
+    top:      0;
+    z-index:  -1;
+  }
+
+  &__toys {
+    @include display-flex();
+    justify-content: center;
+    flex-wrap:       wrap;
+    padding:         60px 25px 20px;
+    box-sizing:      border-box;
+
+    button {
+      margin-right:  19px;
+      margin-bottom: 9px;
+      height:        120px;
+    }
+
+    img {
+      height:     100%;
+      width:      auto;
+      padding:    6px;
+      box-sizing: border-box;
+      @include hover {
+        cursor:    pointer;
+        transform: scale(1.2);
+      }
+
+      &.m-correct {
+        background: transparent;
+        animation:  correctLoss 1s;
+      }
+
+      &.m-wrong {
+        background: transparent;
+        animation:  wrongLoss 1s;
+      }
+    }
+  }
+}
+
+@keyframes wrongLoss {
+  0%, 100% {
+    background: transparent;
+  }
+  50% {
+    background: $color-red;
+  }
+}
+
+@keyframes correctLoss {
+  0%, 100% {
+    background: transparent;
+  }
+  50% {
+    background: $color-green-correct;
+  }
+}

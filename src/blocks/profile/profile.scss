@@ -1,0 +1,35 @@
+.profile {
+  &__table {
+    display:       block;
+    max-width:     1040px;
+    margin:        0 auto;
+    padding:       30px 50px;
+    box-sizing:    border-box;
+    border-radius: 20px;
+    font-size:     26px;
+    line-height:   36px;
+    background:    white;
+  }
+
+  &__title {
+    color:       $color-accent-2;
+    font-size:   32px;
+    font-weight: bold;
+  }
+
+  &__result {
+    height: 60px;
+
+    &.m-head {
+    }
+  }
+
+  &__game {
+    min-width:  250px;
+    text-align: center;
+
+    &.m-time {
+      min-width: 200px;
+    }
+  }
+}

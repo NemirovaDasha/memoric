@@ -1,0 +1,18 @@
+section.players#vue-players
+  h1.t-h1.players__title Добавьте игроков
+
+  form.user-form
+    .user-form__container.js-form-players
+      label.user-form__title Введите имена игроков
+      .user-form__item(v-for='item in formPlayers')
+        label.user-form__label {{item.label}}
+        input.user-form__input(placeholder='Введите имя', type='text', :name='item.id' v-model="item.value")
+
+    .user-form__buttons
+      button.button.t-green(type='button' @click='startGame()') Играть
+      button.button(type='button' @click='addPlayer()') Добавить игрока
+      .user-form__error(v-if='hasError')
+        span {{error}}
+
+
+

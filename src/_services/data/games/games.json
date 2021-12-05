@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Потеряшка",
+    "desc": "Найти потеряшку среди других предметов",
+    "color": "#10696D",
+    "img": "assets/img/games/search.svg",
+    "players": false,
+    "id": "loss",
+    "link": "gameLoss.html"
+  },
+  {
+    "title": "Спринтер",
+    "desc": "Помоги Дино первому добежать до финиша",
+    "color": "#1876A9",
+    "img": "assets/img/games/run.svg",
+    "players": false,
+    "id": "sprinter",
+    "link": "sprinterStart.html"
+  },
+  {
+    "title": "Дорога домой",
+    "desc": "Найди правильный путь до домика",
+    "color": "#FC421D",
+    "img": "assets/img/games/house.svg",
+    "players": false,
+    "id": "wayHome",
+    "link": "wayHomeStart.html"
+  },
+  {
+    "title": "Находки",
+    "desc": "Первее всех отыщи куда спряталась потеряшка",
+    "color": "#8D0C68",
+    "img": "assets/img/games/binoculars.svg",
+    "players": true,
+    "id": "finds",
+    "link": "gameFinds.html"
+  },
+  {
+    "title": "Я Знаю!",
+    "desc": "Выбирай вопрос и ответь на него раньше других",
+    "color": "#039BE5",
+    "img": "assets/img/games/question.svg",
+    "players": true,
+    "id": "iKnow",
+    "link": "gameIKnow.html"
+  },
+  {
+    "title": "Блицтурнир",
+    "desc": "Найди как можно больше правильных ответов за отведенное время",
+    "color": "#01A762",
+    "img": "assets/img/games/conversation.svg",
+    "players": true,
+    "id": "blitz",
+    "link": "gameBlitz.html"
+  }
+]

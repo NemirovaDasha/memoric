@@ -1,0 +1,23 @@
+section.start#vue-game-sprinter-start
+  h1.t-h1 Игра "Спринтер"
+
+  section.start__rules
+    p.start__remember Запомни правильные объекты, которые помогут твоему динозавру бежать быстрее
+    .start__elements
+      img(v-for='sign in currentSigns' :src='sign.src')
+
+    .start__action
+      p Если увидишь их&nbsp;в&nbsp;зеленой области, нажимай на&nbsp;знак!
+      section.game-sprinter__area
+        .game-sprinter__push
+        .game-sprinter__signs.m-start
+          img(src='assets/img/games/sprinter/signs/!.svg')
+          img(src='assets/img/games/sprinter/signs/0.svg')
+          img(:src='currentSigns[3].src')
+          img(src='assets/img/games/sprinter/signs/8.svg')
+          img(src='assets/img/games/sprinter/signs/4.svg')
+    .start__goodluck
+      img.start__player(src='assets/img/games/sprinter/player1.svg')
+      .start__btn
+        p Удачи тебе и твоему спринтеру!
+        a.button.t-green.js-start-sprinter(href='gameSprinter.html' id='js-play') Играть

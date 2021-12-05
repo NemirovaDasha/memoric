@@ -1,0 +1,7 @@
+mixin svgIcon(width, height, id, fill)
+  svg(
+    width=width
+    height=height
+    fill=fill
+  )
+    use(xlink:href="assets/img/icons/icons-sprite.svg" + id)

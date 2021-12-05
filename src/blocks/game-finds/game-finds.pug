@@ -1,0 +1,17 @@
+section.game-finds.wrapper#vue-game-finds
+  h1.t-h1 Игра "Находки"
+
+  section.game-finds__game
+    .game-finds__find
+      .game-loss__picture.m-finds.js-smile
+        img(:src='correctAnswer.src')
+      button.button.t-green.js-send-finds-points(type='button' @click='endGame()') Закончить игру
+
+    .game-finds__field.js-find-smile
+      p.game-blitz__player отвечает
+        span {{currentPlayerName}}
+      button(type='button' v-for="smile in currentSmileList" @click='checkAnswer(smile)')
+        img(
+          :src="smile.src"
+          :class = "{'m-correct': smile.success, 'm-wrong': smile.error}"
+        )

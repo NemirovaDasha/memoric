@@ -1,0 +1,17 @@
+section.game-sprinter#vue-game-sprinter
+  h1.t-h1 Игра "Спринтер"
+
+  section.wrapper.game-sprinter__game
+    section.game-sprinter__field
+      img.game-sprinter__road(src='assets/img/games/sprinter/road.svg')
+      .game-sprinter__players
+        img(src='assets/img/games/sprinter/player3.svg', id='player3')
+        img(src='assets/img/games/sprinter/player2.svg', id='player2')
+        img(src='assets/img/games/sprinter/player1.svg', id='player1')
+
+    section.game-sprinter__area
+      .game-sprinter__push.js-push
+      .game-sprinter__signs.js-signs
+        img.js-fast(v-for='sign in currentSignsList' :src='sign.src' :data-correct='sign.success')
+
+

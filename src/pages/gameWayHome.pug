@@ -1,0 +1,13 @@
+extends templates/main
+
+block container
+  main.main#vue-game-way-home
+    include ../blocks/game-way-home/game-way-home
+    include ../blocks/game-way-home/winner/winner
+
+block footer
+
+block clouds
+
+block append scripts
+  script(src="scripts/vueGameWayHome.bundle.js")

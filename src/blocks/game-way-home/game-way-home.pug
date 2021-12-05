@@ -1,0 +1,11 @@
+section.game-way-home
+  h1.t-h1 Игра "Дорога домой"
+
+  section.game-way-home__game
+    img.game-way-home__map(src='assets/img/games/wayHome/map.svg')
+    .game-way-home__homes.js-homes
+      //button(type='button' @click='checkAnswer(2)')
+      img(src='assets/img/games/wayHome/home.svg' @click='checkAnswer(3)')
+      img(src='assets/img/games/wayHome/home.svg' @click='checkAnswer(2)')
+      img(src='assets/img/games/wayHome/home.svg' @click='checkAnswer(1)')
+    img.game-way-home__player(src='assets/img/games/wayHome/player.svg')

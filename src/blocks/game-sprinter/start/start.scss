@@ -1,0 +1,40 @@
+.start {
+
+  &__rules {
+    text-align: center;
+    margin-top: -50px;
+  }
+
+  &__elements {
+    @include display-flex(row, center, center);
+    margin: 30px 0;
+
+    img {
+      margin-right: 70px;
+      width:        80px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__goodluck {
+    @include display-flex(row, center, center);
+    margin: 20px;
+  }
+
+  &__player {
+    width:  170px;
+    height: auto;
+  }
+
+  &__btn {
+    width: 330px;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+}

@@ -1,0 +1,20 @@
+.timer {
+  position:    fixed;
+  top:         0;
+  bottom:      0;
+  left:        0;
+  right:       0;
+  color:       $color-red;
+  font-size:   140px;
+  line-height: 140px;
+  font-weight: bold;
+  z-index:     10;
+  text-align:  center;
+  padding-top: 220px;
+  box-sizing:  border-box;
+  background:  rgba(black, 0.65);
+
+  &.m-hide {
+    visibility: hidden;
+  }
+}

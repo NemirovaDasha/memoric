@@ -1,0 +1,12 @@
+section.question(v-else)
+  h1.t-h1 {{currentQuestion.theme}} ({{currentQuestion.points}})
+
+  section.question__question
+    p.game-blitz__question.question__game {{currentQuestion.question}}
+    p.question__answer(v-if='show') Ответ:
+      span {{currentQuestion.answer}}
+
+    .question__buttons
+      button.button.t-green.t-scale(type='button', @click='showAnswer()' :style="{visibility: propVisibility}") Показать ответ
+      button.button.t-correct.t-scale(type='button', @click='successAnswer()') Верный ответ
+      button.button.t-wrong.t-scale(type='button', @click='failAnswer()') Неверный ответ

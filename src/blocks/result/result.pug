@@ -1,0 +1,22 @@
+section.wrapper.result#vue-result
+  h1.t-h1 Итоги
+
+  img.result__stars(src='assets/img/other/stars.svg')
+  img.result__stars(src='assets/img/other/stars.svg')
+  img.result__stars(src='assets/img/other/stars.svg')
+
+  section.result__table
+    .result__places
+      .result__prizewinners
+        p.result__player.m-first {{players[0].value}} ({{players[0].points}})
+        p.result__player {{players[1].value}} ({{players[1].points}})
+        p.result__player(v-if='players.length > 2') {{players[2].value}} ({{players[2].points}})
+      img(src='assets/img/other/places.svg')
+    .result__winner
+      h2.result__title Молодцы!
+      .result__congrats
+        img(src='assets/img/other/medal.svg')
+        p Поздравляем победителя!!!
+      img.result__dino(src='assets/img/dino/results-dino.jpg')
+
+
