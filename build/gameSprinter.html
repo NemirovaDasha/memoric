@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Меморик</title>
+    <meta name="description" content="Сайт для развития внимания и памяти детей дошкольного и младшего школьного возраста">
+    <meta name="keywords" content="Память, внимание, дети, развитие, дошколята, школьники">
+    <meta name="theme-color" content="#AFD9C3">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-64.png" sizes="64x64">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="...">
+    <meta property="og:title" content="Меморик">
+    <meta property="og:description" content="Сайт для развития внимания и памяти детей дошкольного и младшего школьного возраста">
+    <meta property="og:image">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+</head>
+
+<body>
+    <section class="popup mod-hidden">
+        <div class="popup__container">
+            <div class="popup__text">
+                <p>Нужно немножко отдохнуть!</p>
+                <p>Ты&nbsp;занимаешься уже целый час.</p>
+                <p>Сделай разминку и&nbsp;дай глазкам отдохнуть!</p>
+            </div>
+            <div class="popup__elements">
+                <div class="popup__clock"><img src="assets/img/other/clock.png"><span id="js-rest-time"></span></div><button class="button t-white" id="js-hide-popup">Я готов продолжать</button>
+            </div>
+        </div><img src="assets/img/other/timeUp.jpg">
+    </section>
+    <script src="scripts/debug.bundle.js"></script>
+    <header class="header"><a class="header__logo" href="index.html"><img class="header__img" src="assets/img/logo/logo.svg" alt="logo"></a>
+        <div class="header__games"><a class="header__link t-link1" href="individual.html">Индивидуальные игры</a><a class="header__link t-link1" href="team.html">Командные игры</a></div>
+    </header>
+    <main class="main">
+        <section class="timer">
+            <p id="js-timer"></p>
+        </section>
+        <section class="game-sprinter" id="vue-game-sprinter">
+            <h1 class="t-h1">Игра "Спринтер"</h1>
+            <section class="wrapper game-sprinter__game">
+                <section class="game-sprinter__field"><img class="game-sprinter__road" src="assets/img/games/sprinter/road.svg">
+                    <div class="game-sprinter__players"><img src="assets/img/games/sprinter/player3.svg" id="player3"><img src="assets/img/games/sprinter/player2.svg" id="player2"><img src="assets/img/games/sprinter/player1.svg" id="player1"></div>
+                </section>
+                <section class="game-sprinter__area">
+                    <div class="game-sprinter__push js-push"></div>
+                    <div class="game-sprinter__signs js-signs"><img class="js-fast" v-for="sign in currentSignsList" :src="sign.src" :data-correct="sign.success"></div>
+                </section>
+            </section>
+        </section>
+        <section class="winner">
+            <p>Победил</p>
+            <div class="js-winner"><img class="winner__img" src="assets/img/games/sprinter/player3.svg" id="winner3"><img class="winner__img" src="assets/img/games/sprinter/player2.svg" id="winner2"><img class="winner__img" src="assets/img/games/sprinter/player1.svg" id="winner1"></div>
+            <div class="winner__buttons"><a class="button t-white" href="sprinterStart.html">Еще раз</a><a class="button t-green t-scale" href="individual.html">Закончить игру</a></div>
+        </section>
+    </main>
+    <script src="scripts/main.bundle.js"></script>
+    <script src="scripts/vendor/vue.js"></script>
+    <script src="scripts/vueGameSprinter.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Меморик</title>
+    <meta name="description" content="Сайт для развития внимания и памяти детей дошкольного и младшего школьного возраста">
+    <meta name="keywords" content="Память, внимание, дети, развитие, дошколята, школьники">
+    <meta name="theme-color" content="#AFD9C3">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-64.png" sizes="64x64">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="...">
+    <meta property="og:title" content="Меморик">
+    <meta property="og:description" content="Сайт для развития внимания и памяти детей дошкольного и младшего школьного возраста">
+    <meta property="og:image">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+</head>
+
+<body>
+    <section class="popup mod-hidden">
+        <div class="popup__container">
+            <div class="popup__text">
+                <p>Нужно немножко отдохнуть!</p>
+                <p>Ты&nbsp;занимаешься уже целый час.</p>
+                <p>Сделай разминку и&nbsp;дай глазкам отдохнуть!</p>
+            </div>
+            <div class="popup__elements">
+                <div class="popup__clock"><img src="assets/img/other/clock.png"><span id="js-rest-time"></span></div><button class="button t-white" id="js-hide-popup">Я готов продолжать</button>
+            </div>
+        </div><img src="assets/img/other/timeUp.jpg">
+    </section>
+    <script src="scripts/debug.bundle.js"></script>
+    <header class="header"><a class="header__logo" href="index.html"><img class="header__img" src="assets/img/logo/logo.svg" alt="logo"></a>
+        <div class="header__games"><a class="header__link t-link1" href="individual.html">Индивидуальные игры</a><a class="header__link t-link1" href="team.html">Командные игры</a></div>
+    </header>
+    <main class="main wrapper">
+        <section class="question" v-else>
+            <h1 class="t-h1">{{currentQuestion.theme}} ({{currentQuestion.points}})</h1>
+            <section class="question__question">
+                <p class="game-blitz__question question__game">{{currentQuestion.question}}</p>
+                <p class="question__answer" v-if="show">Ответ:<span>{{currentQuestion.answer}}</span></p>
+                <div class="question__buttons"><button class="button t-green t-scale" type="button" @click="showAnswer()" :style="{visibility: propVisibility}">Показать ответ</button><button class="button t-correct t-scale" type="button" @click="successAnswer()">Верный ответ</button><button class="button t-wrong t-scale" type="button" @click="failAnswer()">Неверный ответ</button></div>
+            </section>
+        </section>
+    </main>
+    <script src="scripts/main.bundle.js"></script>
+    <script src="scripts/vendor/vue.js"></script>
+    <script src="scripts/vueGameIKnowQuestion.bundle.js"></script>
+</body>
+
+</html>

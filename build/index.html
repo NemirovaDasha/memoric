@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Меморик</title>
+    <meta name="description" content="Сайт для развития внимания и памяти детей дошкольного и младшего школьного возраста">
+    <meta name="keywords" content="Память, внимание, дети, развитие, дошколята, школьники">
+    <meta name="theme-color" content="#AFD9C3">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-64.png" sizes="64x64">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="...">
+    <meta property="og:title" content="Меморик">
+    <meta property="og:description" content="Сайт для развития внимания и памяти детей дошкольного и младшего школьного возраста">
+    <meta property="og:image">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+</head>
+
+<body>
+    <div class="clouds" id="clouds">
+        <div class="clouds layer-1" data-depth="0.1"></div>
+        <div class="clouds layer-2" data-depth="0.5"></div>
+    </div>
+    <section class="popup mod-hidden">
+        <div class="popup__container">
+            <div class="popup__text">
+                <p>Нужно немножко отдохнуть!</p>
+                <p>Ты&nbsp;занимаешься уже целый час.</p>
+                <p>Сделай разминку и&nbsp;дай глазкам отдохнуть!</p>
+            </div>
+            <div class="popup__elements">
+                <div class="popup__clock"><img src="assets/img/other/clock.png"><span id="js-rest-time"></span></div><button class="button t-white" id="js-hide-popup">Я готов продолжать</button>
+            </div>
+        </div><img src="assets/img/other/timeUp.jpg">
+    </section>
+    <script src="scripts/debug.bundle.js"></script>
+    <header class="header"><a class="header__logo" href="index.html"><img class="header__img" src="assets/img/logo/logo.svg" alt="logo"></a>
+        <div class="header__games"><a class="header__link t-link1" href="individual.html">Индивидуальные игры</a><a class="header__link t-link1" href="team.html">Командные игры</a></div>
+    </header>
+    <main class="main wrapper">
+        <section class="main-info">
+            <h1 class="t-h1">Детский развивающий сайт Меморик</h1><img class="main-info__img" src="assets/img/dino/main-dino.png">
+            <section class="main-info__text">
+                <p class="t-p1">&laquo;Меморик&raquo; направлен на&nbsp;развитие памяти и&nbsp;внимания детей от&nbsp;5&nbsp;до&nbsp;11&nbsp;лет</p>
+                <p class="t-p1">Дошколята смогут поготовиться к&nbsp;школе, а&nbsp;школьники младшего возраста&nbsp;&mdash; к&nbsp;средней школе</p>
+                <p class="t-p2">&laquo;Меморик&raquo; помогает детям развивать память и&nbsp;внимание, благодаря различным играм, основанных на&nbsp;различных методиках. Играя, ребенок сможет не&nbsp;только весело провести время, но&nbsp;и&nbsp;улучшить свою памть и&nbsp;расширить кругозор</p>
+            </section>
+            <section class="game-info">
+                <article class="game-info__item m-single"><img class="game-info__img" src="assets/img/dino/single-dino.jpg">
+                    <div class="game-info__info">
+                        <h2 class="game-info__title">Индивидуальные задания</h2>
+                        <div class="game-info__text">
+                            <p>Игры на&nbsp;улучшение внимания и&nbsp;памяти</p>
+                            <p>Веселые и&nbsp;полезные занятия с&nbsp;ребенком</p>
+                        </div><a class="button t-green game-info__btn" href="individual.html">Начать заниматься</a>
+                    </div>
+                </article>
+                <article class="game-info__item">
+                    <h2 class="game-info__title">командные игры</h2>
+                    <div class="game-info__text">
+                        <p>Игры для взаимодействия детей</p>
+                        <p>Развитие быстродействия, логики и&nbsp;внимания</p>
+                    </div>
+                    <div class="game-info__team"><a class="button t-green game-info__btn t-2" href="team.html">Начать заниматься</a><img class="game-info__img" src="assets/img/dino/two-dino.jpg"></div>
+                </article>
+            </section>
+        </section>
+    </main>
+    <footer class="footer"><img class="footer__field" src="assets/img/footer/field.svg" alt="field">
+        <section class="footer__content">
+            <div class="wrapper footer__wrapper"><a class="footer__logo t-link-memory" href="index.html"><img src="assets/img/logo/logo.svg" alt="logo">
+                    <p class="footer__name">еморик</p>
+                </a>
+                <section class="footer__games"><a href="individual.html">Индивидуальные игры</a><a href="team.html">Командные игры</a></section>
+                <section class="footer__media">
+                    <p class="footer__author"><span>Разработчик: Немирова Дарья Алексеевна.</span><span>Сайт разработан в&nbsp;качестве учебного проекта, все совпадения с&nbsp;реальностью случайны.</span></p>
+                    <section class="footer__social"><a class="footer__link" href="#"><svg width="40" height="40">
+                                <use xlink:href="assets/img/icons/icons-sprite.svg#i-inst-footer"></use>
+                            </svg></a><a class="footer__link" href="#"><svg width="40" height="40">
+                                <use xlink:href="assets/img/icons/icons-sprite.svg#i-teleg-footer"></use>
+                            </svg></a><a class="footer__link" href="#"><svg width="40" height="40">
+                                <use xlink:href="assets/img/icons/icons-sprite.svg#i-vk-footer"></use>
+                            </svg></a></section>
+                </section>
+            </div>
+        </section>
+        <section class="footer__note">
+            <p>“Меморик” - проект для конкурса "IT-Архангельск" по web-разработке</p>
+        </section>
+    </footer>
+    <script src="scripts/main.bundle.js"></script>
+    <script src="scripts/vendor/vue.js"></script>
+</body>
+
+</html>
