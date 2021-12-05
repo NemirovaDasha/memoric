@@ -14,7 +14,7 @@
 
   &__item {
     @include display-flex(column, start, flex-start);
-    margin:      8px 0;
+    margin:      20px 0;
     width:       max-content;
     position:    relative;
     box-sizing:  border-box;
