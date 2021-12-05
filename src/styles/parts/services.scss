@@ -18,6 +18,10 @@ main {
   padding:    50px;
   margin:     0 auto;
   box-sizing: border-box;
+
+  &.m-full-screen{
+    max-width: none;
+  }
 }
 
 .mod-visible {
